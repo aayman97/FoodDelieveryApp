@@ -10,12 +10,13 @@
 		2504259027B5DD8B0040878E /* FoodDelieveryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504258F27B5DD8B0040878E /* FoodDelieveryAppApp.swift */; };
 		2504259227B5DD8B0040878E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504259127B5DD8B0040878E /* ContentView.swift */; };
 		2504259427B5DD8C0040878E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2504259327B5DD8C0040878E /* Assets.xcassets */; };
-		2504259727B5DD8C0040878E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2504259627B5DD8C0040878E /* Preview Assets.xcassets */; };
 		2504259927B5DD8C0040878E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504259827B5DD8C0040878E /* Persistence.swift */; };
 		2504259C27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2504259A27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld */; };
 		250425A627B5DD8C0040878E /* FoodDelieveryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250425A527B5DD8C0040878E /* FoodDelieveryAppTests.swift */; };
 		250425B027B5DD8C0040878E /* FoodDelieveryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250425AF27B5DD8C0040878E /* FoodDelieveryAppUITests.swift */; };
 		250425B227B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250425B127B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift */; };
+		25887A1B27B67E4300E882D8 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25887A1A27B67E4300E882D8 /* StartScreen.swift */; };
+		25887A1D27B681A800E882D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25887A1C27B681A800E882D8 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		2504258F27B5DD8B0040878E /* FoodDelieveryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelieveryAppApp.swift; sourceTree = "<group>"; };
 		2504259127B5DD8B0040878E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2504259327B5DD8C0040878E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2504259627B5DD8C0040878E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2504259827B5DD8C0040878E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2504259B27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodDelieveryApp.xcdatamodel; sourceTree = "<group>"; };
 		250425A127B5DD8C0040878E /* FoodDelieveryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodDelieveryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +48,8 @@
 		250425AB27B5DD8C0040878E /* FoodDelieveryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodDelieveryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		250425AF27B5DD8C0040878E /* FoodDelieveryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelieveryAppUITests.swift; sourceTree = "<group>"; };
 		250425B127B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelieveryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25887A1A27B67E4300E882D8 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
+		25887A1C27B681A800E882D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,22 +100,16 @@
 		2504258E27B5DD8B0040878E /* FoodDelieveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				25887A2027B6843100E882D8 /* Preview Content */,
+				25887A1A27B67E4300E882D8 /* StartScreen.swift */,
 				2504258F27B5DD8B0040878E /* FoodDelieveryAppApp.swift */,
 				2504259127B5DD8B0040878E /* ContentView.swift */,
 				2504259327B5DD8C0040878E /* Assets.xcassets */,
 				2504259827B5DD8C0040878E /* Persistence.swift */,
 				2504259A27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld */,
-				2504259527B5DD8C0040878E /* Preview Content */,
+				25887A1C27B681A800E882D8 /* HomeScreen.swift */,
 			);
 			path = FoodDelieveryApp;
-			sourceTree = "<group>";
-		};
-		2504259527B5DD8C0040878E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2504259627B5DD8C0040878E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		250425A427B5DD8C0040878E /* FoodDelieveryAppTests */ = {
@@ -131,6 +127,13 @@
 				250425B127B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift */,
 			);
 			path = FoodDelieveryAppUITests;
+			sourceTree = "<group>";
+		};
+		25887A2027B6843100E882D8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +240,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2504259727B5DD8C0040878E /* Preview Assets.xcassets in Resources */,
 				2504259427B5DD8C0040878E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +267,8 @@
 			files = (
 				2504259927B5DD8C0040878E /* Persistence.swift in Sources */,
 				2504259227B5DD8B0040878E /* ContentView.swift in Sources */,
+				25887A1D27B681A800E882D8 /* HomeScreen.swift in Sources */,
+				25887A1B27B67E4300E882D8 /* StartScreen.swift in Sources */,
 				2504259027B5DD8B0040878E /* FoodDelieveryAppApp.swift in Sources */,
 				2504259C27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld in Sources */,
 			);
