@@ -16,7 +16,11 @@
 		250425B027B5DD8C0040878E /* FoodDelieveryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250425AF27B5DD8C0040878E /* FoodDelieveryAppUITests.swift */; };
 		250425B227B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250425B127B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift */; };
 		25887A1B27B67E4300E882D8 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25887A1A27B67E4300E882D8 /* StartScreen.swift */; };
-		25887A1D27B681A800E882D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25887A1C27B681A800E882D8 /* HomeScreen.swift */; };
+		2598F08727C017830027B5D0 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598F08627C017830027B5D0 /* Screens.swift */; };
+		2598F08927C0587F0027B5D0 /* Screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598F08827C0587F0027B5D0 /* Screen2.swift */; };
+		2598F08B27C058A90027B5D0 /* Screen3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598F08A27C058A90027B5D0 /* Screen3.swift */; };
+		2598F08D27C058D10027B5D0 /* Screen4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598F08C27C058D10027B5D0 /* Screen4.swift */; };
+		25CFA3DD27C00E1B00565017 /* Screen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CFA3DC27C00E1B00565017 /* Screen1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +53,11 @@
 		250425AF27B5DD8C0040878E /* FoodDelieveryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelieveryAppUITests.swift; sourceTree = "<group>"; };
 		250425B127B5DD8C0040878E /* FoodDelieveryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelieveryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25887A1A27B67E4300E882D8 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
-		25887A1C27B681A800E882D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		2598F08627C017830027B5D0 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		2598F08827C0587F0027B5D0 /* Screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen2.swift; sourceTree = "<group>"; };
+		2598F08A27C058A90027B5D0 /* Screen3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen3.swift; sourceTree = "<group>"; };
+		2598F08C27C058D10027B5D0 /* Screen4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4.swift; sourceTree = "<group>"; };
+		25CFA3DC27C00E1B00565017 /* Screen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,11 @@
 				2504259327B5DD8C0040878E /* Assets.xcassets */,
 				2504259827B5DD8C0040878E /* Persistence.swift */,
 				2504259A27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld */,
-				25887A1C27B681A800E882D8 /* HomeScreen.swift */,
+				25CFA3DC27C00E1B00565017 /* Screen1.swift */,
+				2598F08627C017830027B5D0 /* Screens.swift */,
+				2598F08827C0587F0027B5D0 /* Screen2.swift */,
+				2598F08A27C058A90027B5D0 /* Screen3.swift */,
+				2598F08C27C058D10027B5D0 /* Screen4.swift */,
 			);
 			path = FoodDelieveryApp;
 			sourceTree = "<group>";
@@ -267,10 +279,14 @@
 			files = (
 				2504259927B5DD8C0040878E /* Persistence.swift in Sources */,
 				2504259227B5DD8B0040878E /* ContentView.swift in Sources */,
-				25887A1D27B681A800E882D8 /* HomeScreen.swift in Sources */,
+				2598F08927C0587F0027B5D0 /* Screen2.swift in Sources */,
 				25887A1B27B67E4300E882D8 /* StartScreen.swift in Sources */,
 				2504259027B5DD8B0040878E /* FoodDelieveryAppApp.swift in Sources */,
+				2598F08727C017830027B5D0 /* Screens.swift in Sources */,
+				2598F08D27C058D10027B5D0 /* Screen4.swift in Sources */,
+				2598F08B27C058A90027B5D0 /* Screen3.swift in Sources */,
 				2504259C27B5DD8C0040878E /* FoodDelieveryApp.xcdatamodeld in Sources */,
+				25CFA3DD27C00E1B00565017 /* Screen1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +453,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,8 +482,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

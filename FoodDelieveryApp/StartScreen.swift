@@ -37,7 +37,7 @@ struct StartScreen: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: HomeScreen(), label:{
+                NavigationLink(destination: Screens(), label:{
                     Text("Get Started")
                         .foregroundColor(Color.white)
                         .fontWeight(.bold)

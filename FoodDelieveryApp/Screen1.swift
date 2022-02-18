@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeScreen: View {
+struct Screen1: View {
     
     var screenSize: CGRect = UIScreen.main.bounds
     
@@ -119,13 +119,15 @@ struct HomeScreen: View {
                 }
             }
             
-            Spacer(minLength: 70)
+            Spacer(minLength: 100)
             
         }.navigationBarBackButtonHidden(true).navigationBarHidden(true).padding(.vertical,10)
         
         
     }
     
+    
+   
     
 
     @ViewBuilder
@@ -145,9 +147,9 @@ struct HomeScreen: View {
         }.frame(width: screenSize.width*0.95, height: screenSize.height*0.08, alignment: .leading)
     }
 }
-struct HomeScreen_Previews: PreviewProvider {
+struct Screen1_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen()
+        Screen1()
     }
 }
 
