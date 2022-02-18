@@ -17,6 +17,7 @@ struct HomeScreen: View {
     var body: some View {
         
         VStack(alignment: .leading){
+         
             TopBar(name : "Ahmed Ayman").padding(.leading,10)
             
             HStack(alignment: .center, spacing: screenSize.width*0.15){
@@ -47,9 +48,9 @@ struct HomeScreen: View {
             
                 .background( Color( red: 53/255, green: 106/255, blue: 126/255, opacity: 1.0)).cornerRadius(20).padding(.leading,10)
             
-            
+            Spacer()
             HStack(alignment: .center){
-                Text("Categories").font(.system(size: 30)).fontWeight(.bold)
+                Text("Categories").font(.system(size: 25)).fontWeight(.bold)
                 
                 Spacer()
                 Button(
@@ -61,7 +62,7 @@ struct HomeScreen: View {
                             
                     }
                 )
-            }.padding(.horizontal,10)
+            }.padding(.horizontal,10).padding(.vertical,10)
             
             ScrollView(.horizontal, showsIndicators: false ){
                 HStack(spacing : 10){
@@ -79,20 +80,54 @@ struct HomeScreen: View {
                                     .stroke(Color.gray.opacity(0.5), lineWidth: 2).background(
                                         Text("\(categories[i])").fontWeight(.bold)    .foregroundColor(category == categories[i] ? Color.white.opacity(1.0) : Color.black.opacity(0.5))  .font(.system(size: 18)))
                             ).background(category == categories[i] ? Color.black : Color.white).cornerRadius(10)
-                            
-                            
-                            
+
                         })
                         
-                    }.padding(.leading,10)
+                    }.padding(.horizontal,5)
                 }
             }
             
-        }.ignoresSafeArea()
+            Spacer()
+            HStack(alignment: .center){
+                Text("Popular Food").font(.system(size: 25)).fontWeight(.bold)
+                
+                Spacer()
+                Button(
+                    action : {
+                        print("View all")
+                    },
+                    label : {
+                        Text("View all").foregroundColor(Color.black.opacity(0.5))
+                            
+                    }
+                )
+            }.padding(.horizontal,10).padding(.vertical,10)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack{
+                    ForEach(0..<2){index in
+                        
+                        Button(action: {
+                            print(index)
+                        }, label:{
+                            FoodCard(category: self.category, width: screenSize.width, height: screenSize.height,index: (index+1)).padding(.horizontal,5)
+                           
+                        })
+                        
+                      
+                    }
+                }
+            }
+            
+            Spacer(minLength: 70)
+            
+        }.navigationBarBackButtonHidden(true).navigationBarHidden(true).padding(.vertical,10)
         
         
     }
     
+    
+
     @ViewBuilder
     func TopBar(name : String)->some View{
         
@@ -113,5 +148,43 @@ struct HomeScreen: View {
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         HomeScreen()
+    }
+}
+
+struct FoodCard: View {
+    var category : String
+    var width : Double
+    var height : Double
+    var index : Int
+    
+    var body: some View {
+        ZStack{
+            Image(""+category+"\(index)")
+                .resizable()
+                            .scaledToFill()
+                            .frame(width: width*0.52, height: height*0.33).cornerRadius(19)
+                            .clipped()
+               
+            
+            Circle()
+                .fill(Color( red: 218/255, green: 77/255, blue: 75/255, opacity: 1.0))
+                .frame(width: width*0.7, height: width*0.7)
+                .offset(x:-(width*0.5)/2.2,y:(height*0.3)/2)
+            
+            VStack(alignment: .leading){
+                
+                let a : Double = 20.0
+                let b : String = String(format: "%.2f", a)
+                
+                Text("Most Loved "+category).foregroundColor(Color.white)
+                    .fontWeight(.medium)
+                    .frame(width:width*0.25 ).multilineTextAlignment(.leading).offset(x: -0).font(.system(size: 19))
+                
+                Text("$\(b)").foregroundColor(Color.white)
+                    .fontWeight(.medium).frame(height: 10).font(.system(size: 19))
+            }.frame(width: width*0.25).offset(x:-(width*0.1),y:(height*0.3)/3.1)
+        }
+        .frame(width: width*0.52, height: height*0.33).cornerRadius(10)
+        .clipped()
     }
 }
