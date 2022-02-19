@@ -13,8 +13,14 @@ struct Screen1: View {
     
     var categories: [String] = ["Burger","Chicken","Pizza","Seafood"]
     
+    
     @State var category : String = "Burger"
+    @State var show: Bool = false
+    
+    
     var body: some View {
+        
+        
         
         VStack(alignment: .leading){
          
@@ -28,8 +34,8 @@ struct Screen1: View {
                         .tracking(2)
                         .foregroundColor(Color.white).font(.system(size: 20)).fontWeight(.bold).frame(width: screenSize.width*0.4, height: (screenSize.height*0.18)/3)
                     Spacer()
-                    Button(action: {
-                        print("Order Now")
+                    Button(action : {
+                        show = true
                     }, label: {
                         Text("Order Now")
                             .fontWeight(.bold)
@@ -50,7 +56,7 @@ struct Screen1: View {
             
             Spacer()
             HStack(alignment: .center){
-                Text("Categories").font(.system(size: 25)).fontWeight(.bold)
+                Text("Categories").font(.system(size: 25)).fontWeight(.bold).foregroundColor(Color.black)
                 
                 Spacer()
                 Button(
@@ -89,7 +95,7 @@ struct Screen1: View {
             
             Spacer()
             HStack(alignment: .center){
-                Text("Popular Food").font(.system(size: 25)).fontWeight(.bold)
+                Text("Popular Food").font(.system(size: 25)).fontWeight(.bold).foregroundColor(Color.black)
                 
                 Spacer()
                 Button(
@@ -107,9 +113,7 @@ struct Screen1: View {
                 HStack{
                     ForEach(0..<2){index in
                         
-                        Button(action: {
-                            print(index)
-                        }, label:{
+                        NavigationLink(destination: ProductScreen(category: self.category), label:{
                             FoodCard(category: self.category, width: screenSize.width, height: screenSize.height,index: (index+1)).padding(.horizontal,5)
                            
                         })
@@ -121,7 +125,10 @@ struct Screen1: View {
             
             Spacer(minLength: 100)
             
-        }.navigationBarBackButtonHidden(true).navigationBarHidden(true).padding(.vertical,10)
+        }.popupNavigationView(show: $show){
+            DetailsScreen(show: $show)
+        }
+        .navigationBarBackButtonHidden(true).navigationBarHidden(true).padding(.vertical,10).background(Color.white)
         
         
     }
@@ -142,7 +149,7 @@ struct Screen1: View {
             VStack(alignment : .leading){
                 Text("Good Afternoon").foregroundColor(Color.black.opacity(0.5)).font(.system(size: 15)).fontWeight(.bold)
                 Spacer(minLength: 2)
-                Text(name).fontWeight(.medium).font(.system(size: 18))
+                Text(name).fontWeight(.medium).font(.system(size: 18)).foregroundColor(Color.black)
             }.frame(height :screenSize.height*0.05 ).padding(.leading,5)
         }.frame(width: screenSize.width*0.95, height: screenSize.height*0.08, alignment: .leading)
     }
@@ -178,15 +185,44 @@ struct FoodCard: View {
                 let a : Double = 20.0
                 let b : String = String(format: "%.2f", a)
                 
-                Text("Most Loved "+category).foregroundColor(Color.white)
+                Text("Most Loved \n"+category).foregroundColor(Color.white)
                     .fontWeight(.medium)
-                    .frame(width:width*0.25 ).multilineTextAlignment(.leading).offset(x: -0).font(.system(size: 19))
+                     .multilineTextAlignment(.leading).font(.system(size: 19))
                 
                 Text("$\(b)").foregroundColor(Color.white)
                     .fontWeight(.medium).frame(height: 10).font(.system(size: 19))
-            }.frame(width: width*0.25).offset(x:-(width*0.1),y:(height*0.3)/3.1)
+            }.frame(width: width*0.4).offset(x:-(width*0.1),y:(height*0.3)/3.1)
         }
         .frame(width: width*0.52, height: height*0.33).cornerRadius(10)
         .clipped()
     }
 }
+
+
+extension View{
+
+    func popupNavigationView<Content: View>(show: Binding<Bool>,@ViewBuilder content: @escaping ()->Content) ->some View{
+
+        return self
+            .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .center)
+            .overlay
+            {
+                if show.wrappedValue{
+                    GeometryReader{
+                        proxy in
+
+                        let size = proxy.size
+
+                        NavigationView{
+                            content()
+                        }.frame(width: size.width, height: size.height, alignment: .center)
+                            .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .center)
+                    }
+                }
+            }
+
+    }
+}
+
+
+

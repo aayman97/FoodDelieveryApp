@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct Screen2: View {
+    var screenSize: CGRect = UIScreen.main.bounds
     var body: some View {
-        Text("Screen 2")
+        VStack{
+            Text("Screen 2").foregroundColor(Color.black).font(.system(size: 40)).fontWeight(.light)
+        }.frame(
+            width: screenSize.width, height: screenSize.height
+        ).background(Color.white)
     }
 }
 

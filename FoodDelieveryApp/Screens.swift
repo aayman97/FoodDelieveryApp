@@ -18,9 +18,9 @@ struct Screens: View {
         ZStack{
           
             if(index == 0.0){
-                ScrollView {
+              
                     Screen1()
-                }
+               
             }else if(index == 1.0){
                 Screen2()
             }
@@ -33,7 +33,7 @@ struct Screens: View {
             
             
             ZStack{
-                Circle().fill(Color.red).frame(width: screenSize.height*0.07).offset(x: ((-((screenSize.width*0.95) - ((screenSize.height*0.07)))/2)+38)+((index)*(screenSize.width*0.95)/4.6) )
+                Circle().fill(Color.red).frame(width: screenSize.height*0.05).offset(x: ((-((screenSize.width*0.95) - ((screenSize.height*0.07)))/2)+42)+((index)*(screenSize.width*0.95)/4.78) )
                 HStack{
                     Spacer()
                     Button(action: {
@@ -41,7 +41,7 @@ struct Screens: View {
                             index = 0.0
                         }
                     }, label: {
-                        Image(systemName: "house.fill").resizable().foregroundColor(Color.white).frame(width: 35,height: 35)
+                        Image(systemName: "house.fill").resizable().foregroundColor(Color.white).frame(width: 20,height: 20)
                     })
                     Spacer()
                     Button(action: {
@@ -49,7 +49,7 @@ struct Screens: View {
                             index = 1.0
                         }
                     }, label: {
-                        Image(systemName: "bag").resizable().foregroundColor(Color.white).frame(width: 35,height: 35)
+                        Image(systemName: "bag").resizable().foregroundColor(Color.white).frame(width: 20,height: 20)
                     })
                     Spacer()
                     Button(action: {
@@ -57,7 +57,7 @@ struct Screens: View {
                             index = 2.0
                         }
                     }, label: {
-                        Image(systemName: "magnifyingglass").resizable().foregroundColor(Color.white).frame(width: 35,height: 35)
+                        Image(systemName: "magnifyingglass").resizable().foregroundColor(Color.white).frame(width: 20,height: 20)
                     })
                     Spacer()
                     Button(action: {
@@ -65,7 +65,7 @@ struct Screens: View {
                             index = 3.0
                         }
                     }, label: {
-                        Image(systemName: "suit.heart").resizable().foregroundColor(Color.white).frame(width: 35,height: 30)
+                        Image(systemName: "suit.heart").resizable().foregroundColor(Color.white).frame(width: 20,height: 20)
                     })
                     Spacer()
                 }
@@ -75,9 +75,10 @@ struct Screens: View {
                 
              
            
-            }.frame(width: screenSize.width*0.95, height: screenSize.height*0.1).background( Color( red: 53/255, green: 106/255, blue: 126/255, opacity: 1.0)).cornerRadius(14).offset(y: screenSize.height*0.41).shadow(radius: 10)
+            }.frame(width: screenSize.width*0.95, height: screenSize.height*0.08).background( Color( red: 53/255, green: 106/255, blue: 126/255, opacity: 1.0)).cornerRadius(14).offset(y: screenSize.height*0.42).shadow(radius: 10)
         
-    }.navigationBarBackButtonHidden(false).navigationBarHidden(true)
+        }.background(Color.white)
+    .navigationBarBackButtonHidden(false).navigationBarHidden(true)
         
     }
 
